@@ -1,0 +1,33 @@
+{
+  "name": "Random-Phone-Number-Generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/albert85/Random-Phone-Number-Generator.git",
+  "author": "Olarewaju Temtope Albert <tmtpalbert@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start:dev": "nodemon --exec babel-node ./server/src/index.js",
+    "build": "babel server/src --out-dir server/dist",
+    "start": "node server/dist/index.js",
+    "lint": "eslint server/src --fix"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-validator": "^5.3.1",
+    "morgan": "^1.9.1",
+    "swagger-jsdoc": "^3.2.8",
+    "swagger-ui-express": "^4.0.2",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-syntax-object-rest-spread": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "nodemon": "^1.18.9"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
+}

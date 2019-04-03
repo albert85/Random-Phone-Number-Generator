@@ -24,6 +24,7 @@ export const GenerateArrayOfNumber = (numberToBeGenerated) => {
 
 
 export const ReadGeneratedNumber = () => {
+  fs.openSync(`${phoneBook[process.env.NODE_ENV]}`, 'a');
   const x = fs.readFileSync(`${phoneBook[process.env.NODE_ENV]}`);
 
   const readNumber = [...x.toString().split(',')];

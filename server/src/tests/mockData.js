@@ -1,0 +1,1 @@
+export const arrElement = [1,2,5,4,3];

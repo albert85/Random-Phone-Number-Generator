@@ -1,3 +1,13 @@
 {
-    "extends": "airbnb-base"
+    "extends": "airbnb-base",
+    "settings": {
+        "import/resolver": {
+            "alias": [
+        [ "helper", "./server/src/helper" ],
+        [ "controller", "./server/src/controller" ],
+        [ "database", "./server/src/database" ],
+        [ "route", "./server/src/route" ]
+      ]
+        }
+    }
 }

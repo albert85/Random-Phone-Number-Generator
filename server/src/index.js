@@ -50,7 +50,6 @@ app.get('/swagger.json', (req, res) => {
 
 app.use('/docs', swaggerUiExpress.serve, swaggerUiExpress.setup(swaggerSpec));
 
-
 // import routes into application
 app.use('/api/v1', route);
 

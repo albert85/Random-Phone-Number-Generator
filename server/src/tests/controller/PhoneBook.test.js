@@ -48,5 +48,18 @@ describe('PhoneBook Controller', () => {
         done();
       });
   })
+  
+  it('should return error when generating with invalid limit value', (done) => {
+
+    request(app)
+      .get('/api/v1/phone-numbers')
+      .expect(422)
+      .end((err, res) => {
+        if(err) throw err
+        expect(res.body).toHaveProperty('message', 'Failed to generate Telephone');
+        expect(res.body.errors).toHaveLength(1);
+        done();
+      });
+  })
 
 });

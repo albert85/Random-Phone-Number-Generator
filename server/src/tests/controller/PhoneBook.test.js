@@ -22,6 +22,31 @@ describe('PhoneBook Controller', () => {
         done();
       });
   })
+  it('should get all list of phone numbers in the database arranged in ascending order', (done) => {
 
+    request(app)
+      .get('/api/v1/phone-numbers-list?sort=ascr')
+      .expect(200)
+      .end((err, res) => {
+        if(err) throw err
+        expect(res.body).toHaveProperty('message', 'All telephone numbers successfully retrieved');
+        expect(res.body.data).toHaveLength(50);
+        expect(parseInt(res.body.data[0])).toBeLessThan(parseInt(res.body.data[49]));
+        done();
+      });
+  })
+  it('should get all list of phone numbers in the database arranged in descending order', (done) => {
+
+    request(app)
+      .get('/api/v1/phone-numbers-list?sort=descr')
+      .expect(200)
+      .end((err, res) => {
+        if(err) throw err
+        expect(res.body).toHaveProperty('message', 'All telephone numbers successfully retrieved');
+        expect(res.body.data).toHaveLength(50);
+        expect(parseInt(res.body.data[0])).toBeGreaterThan(parseInt(res.body.data[49]));
+        done();
+      });
+  })
 
 });

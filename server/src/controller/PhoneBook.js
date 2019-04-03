@@ -1,14 +1,24 @@
 import { checkLimit, checkSort } from 'helper/validator';
-import { GenerateAndSave } from 'helper/util';
+import response from 'helper/response';
+import { GenerateAndSave, ReadGeneratedNumber } from 'helper/util';
 
 export default class PhoneBook {
   static generateTelephoneNo(req, res) {
     const { limit, sort } = req.query;
 
-    const AmountOfTelNoGenerated = checkLimit(limit);
-    const unsortedResult = GenerateAndSave(AmountOfTelNoGenerated);
+    const amountOfTelNoGenerated = checkLimit(limit);
+    const unsortedResult = GenerateAndSave(amountOfTelNoGenerated);
     const sortedTelephoneNumbers = checkSort(sort, unsortedResult);
 
-    return res.status(201).json({ message: 'Telephone successfully generated', data: sortedTelephoneNumbers });
+    response(res, 201, { message: 'Telephone successfully generated' }, sortedTelephoneNumbers, sort);
+  }
+
+  static getAllGeneratedNumbers(req, res) {
+    const { sort } = req.query;
+
+    const telephoneList = ReadGeneratedNumber();
+    const sortedTelephoneList = checkSort(sort, telephoneList);
+
+    response(res, 200, { message: 'All telephone numbers successfully retrieved' }, sortedTelephoneList, sort);
   }
 }

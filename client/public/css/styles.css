@@ -1,0 +1,12 @@
+.phone-book {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-gap: 50px;
+  grid-template-areas:
+    "report-card report-card report-card report-card"
+    "side-menu table-view table-view table-view";
+
+
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJjc3Mvc3R5bGVzLmNzcyIsInNvdXJjZVJvb3QiOiIifQ==*/

@@ -1,0 +1,59 @@
+@import "../../assets/variable";
+
+.phone-book {
+  display: grid;
+  grid-gap: 10px;
+  padding: 0 150px;
+  height: 100vh;
+  font-family: serif;
+  font-weight: 100;
+  background-color: $background;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 30px;
+  grid-template-rows: 10% 20% 1fr;
+  grid-template-areas:
+    "header header header"
+    "total-report-card max-report-card min-report-card"
+    "side-menu table-view table-view";
+
+  .card {
+    background-color: $white;
+    padding: 20px;
+    box-shadow: $boxshadow;
+  }
+
+  .text-size {
+    font-size: 20px;
+  }
+
+  .text-value-size {
+    text-align: right;
+    margin-top: 57px;
+    font-size: 20px;
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  .total-phone-number {
+    grid-area: total-report-card;
+  }
+
+  .max-phone-number {
+    grid-area: max-report-card;
+  }
+
+  .min-phone-number {
+    grid-area: min-report-card;
+  }
+
+  .side-menu {
+    grid-area: side-menu;
+  }
+
+  .table-view {
+    grid-area: table-view;
+  }
+}

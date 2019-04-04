@@ -1,22 +1,23 @@
 {
-    "presets": [
-        "@babel/preset-env"
-    ],
-    "plugins": [
-        "add-module-exports",
-        [
-            "module-resolver",
-            {
-                "root": [
-                    "./server"
-                ],
-                "alias": {
-                    "src": "./server/src",
-                    "controller": "./server/src/controller",
-                    "database": "./server/src/database",
-                    "helper": "./server/src/helper"
-                }
-            }
-        ]
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "add-module-exports",
+    [
+      "module-resolver",
+      {
+        "root": [
+          "./server"
+        ],
+        "alias": {
+          "src": "./server/src",
+          "controller": "./server/src/controller",
+          "database": "./server/src/database",
+          "helper": "./server/src/helper"
+        }
+      }
     ]
+  ]
 }

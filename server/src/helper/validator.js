@@ -1,7 +1,7 @@
 import { sortAscending, sortDescending } from './util';
 
 export const checkLimit = (limit) => {
-  const AmountOfTelNoGenerated = (limit > 50 || limit === undefined) ? 50 : limit;
+  const AmountOfTelNoGenerated = (limit === undefined) ? 1 : limit;
 
   return AmountOfTelNoGenerated;
 };

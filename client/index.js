@@ -9,7 +9,7 @@ import reducers from './src/reducer';
 import App from './src/routes';
 
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
-const store = createStoreWithMiddleware(reducers);
+const store = createStoreWithMiddleware(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 render(
   <Provider store={store} >

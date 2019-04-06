@@ -12,6 +12,7 @@
     "lint": "eslint server/src --fix",
     "web:webpack": "webpack --watch --config webpack.dev.js --mode development",
     "test": "cross-env NODE_ENV=test jest --no-cache --forceExit",
+    "postinstall": "webpack -p --config webpack.prod.js",
     "coverage": "cat coverage/lcov.info | coveralls"
   },
   "dependencies": {

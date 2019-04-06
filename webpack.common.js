@@ -1,8 +1,5 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const miniCssExtractPlugin = require('mini-css-extract-plugin');
-
-const isDevMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   entry: [path.join(__dirname, 'client/index.js')],
@@ -24,7 +21,7 @@ module.exports = {
       {
         test: /\.(scss|css)$/,
         use: [
-          isDevMode ? 'style-loader' : miniCssExtractPlugin.loader,
+          'style-loader',
           {
             loader: 'css-loader',
             options: {

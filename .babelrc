@@ -4,6 +4,11 @@
     "@babel/preset-react"
   ],
   "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-transform-classes",
+    "@babel/plugin-proposal-function-bind",
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-transform-arrow-functions",
     "add-module-exports",
     [
       "module-resolver",
@@ -18,6 +23,6 @@
           "helper": "./server/src/helper"
         }
       }
-    ]
+    ],
   ]
 }

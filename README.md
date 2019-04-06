@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/albert85/Random-Phone-Number-Generator.svg?branch=develop)](https://travis-ci.org/albert85/Random-Phone-Number-Generator)  [![Coverage Status](https://coveralls.io/repos/github/albert85/Random-Phone-Number-Generator/badge.svg)](https://coveralls.io/github/albert85/Random-Phone-Number-Generator) [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://lms-random-phone-number.herokuapp.com/)
+[![Build Status](https://travis-ci.org/albert85/Random-Phone-Number-Generator.svg?branch=develop)](https://travis-ci.org/albert85/Random-Phone-Number-Generator)  [![Coverage Status](https://coveralls.io/repos/github/albert85/Random-Phone-Number-Generator/badge.svg?branch=develop)](https://coveralls.io/github/albert85/Random-Phone-Number-Generator?branch=develop) [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://lms-random-phone-number.herokuapp.com/)
 
 # Random-Phone-Number-Generator
 It generate random phone number for telecommunication
